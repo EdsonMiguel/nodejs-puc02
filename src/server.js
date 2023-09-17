@@ -1,0 +1,11 @@
+const express = require('express')
+const cors = require('cors')
+const routes = require('./routes/circuitRoutes')
+const app = express()
+
+app.use(express.json())
+app.use(cors())
+app.use('/circuits', routes)
+
+
+app.listen(3333)
