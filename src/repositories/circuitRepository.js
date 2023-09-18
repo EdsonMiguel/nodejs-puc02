@@ -1,5 +1,5 @@
 const knex = require('knex');
-const db = knex(require('./knexfile').development);
+const db = knex(require('../../knexfile').development);
 
 async function  create(circuit) {
   return db(this.tableName).insert(circuit).returning('*');
